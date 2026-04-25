@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-emerald-500: #10b981;
+  --color-zinc-950: #09090b;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black antialiased;
+  }
+}
+
+.massive-italic {
+  @apply font-[900] italic tracking-[-0.05em] leading-[0.85];
+}
+
+.emerald-glow-text {
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+.geometric-border {
+  @apply border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-zinc-950;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 hover:bg-emerald-500 transition-colors rounded-full;
+}
+
+.badge-verified {
+  @apply px-2 py-0.5 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded border border-emerald-500/20 uppercase tracking-widest;
+}
